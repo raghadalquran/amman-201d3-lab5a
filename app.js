@@ -142,7 +142,9 @@ testMultiplyArray(testArray);
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and
+ returns an array whose first element is the product of those numbers, and the second element is a string 
+ that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -154,11 +156,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
-
+var sumArr = 1;
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
+    for (var i=0; i<testDynamicArray.length; i++){
+        sumArr = multiply(sumArr , testDynamicArray[i])[0];
+    }
+
+
+    return[sumArr , 'The numbers 1,2,3,4,5 have a product of 120.' ]
 }
 
+testMultiplyAnyArray(testDynamicArray);
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
 
